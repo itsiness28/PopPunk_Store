@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://d2me81nk2sacj"]
+
+[ext_resource type="Script" uid="uid://boie0jml1b0l6" path="res://Scenes/CD_desktop.gd" id="1_evsn2"]
+[ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="2_vs07f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqw74"]
+shader = ExtResource("2_vs07f")
+shader_parameter/grain_intensity = 0.9570000454575
+shader_parameter/min_lum = 0.0
+shader_parameter/max_lum = 1.0
+shader_parameter/time_scale = 0.7850000372875
+shader_parameter/vignette_darkness = 0.890000042275
+shader_parameter/vignette_outer_radius = 0.7
+shader_parameter/vignette_inner_radius = 0.2
+shader_parameter/scanline_intensity = 0.2
+shader_parameter/barrel_distortion = 0.15
+shader_parameter/chromatic_aberration = 0.005
+shader_parameter/crt_vignette_power = 2.0
+shader_parameter/pixel_resolution_x = 320
+shader_parameter/pixel_resolution_y = 240
+shader_parameter/enable_color_quantization = true
+shader_parameter/color_quant_steps = 32.0
+shader_parameter/warble_amount = 0.002
+shader_parameter/warble_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vs07f"]
+shader = ExtResource("2_vs07f")
+shader_parameter/grain_intensity = 0.0
+shader_parameter/min_lum = 0.0
+shader_parameter/max_lum = 0.0
+shader_parameter/time_scale = 0.0400000019
+shader_parameter/vignette_darkness = 0.0050000002375
+shader_parameter/vignette_outer_radius = 0.7
+shader_parameter/vignette_inner_radius = 0.054000002564999997
+shader_parameter/scanline_intensity = 0.06800000323
+shader_parameter/barrel_distortion = 0.0
+shader_parameter/chromatic_aberration = 0.0
+shader_parameter/crt_vignette_power = 0.9890000469775
+shader_parameter/pixel_resolution_x = 640
+shader_parameter/pixel_resolution_y = 480
+shader_parameter/enable_color_quantization = true
+shader_parameter/color_quant_steps = 64.0
+shader_parameter/warble_amount = 0.0
+shader_parameter/warble_speed = 0.0
+
+[node name="Node2D" type="Node2D" unique_id=1147893399]
+script = ExtResource("1_evsn2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1381273921]
+visible = false
+material = SubResource("ShaderMaterial_lqw74")
+position = Vector2(576, 324)
+
+[node name="Shader_Layer" type="CanvasLayer" parent="." unique_id=1435258371]
+visible = false
+
+[node name="Shader" type="ColorRect" parent="Shader_Layer" unique_id=1284208461]
+material = SubResource("ShaderMaterial_vs07f")
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = -0.004105004
+scale = Vector2(28.72, 16.2)
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1228908907]
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 1162.0
+offset_bottom = 662.0
+color = Color(0.0097837895, 0.0097837895, 0.78398585, 1)
+
+[node name="Label_Web" type="Label" parent="." unique_id=1747820669]
+offset_left = 49.0
+offset_top = 270.0
+offset_right = 119.0
+offset_bottom = 302.0
+text = "Web"
+horizontal_alignment = 1
+
+[node name="Button_Oliespress" type="Button" parent="." unique_id=1925853617]
+offset_left = 39.0
+offset_top = 53.0
+offset_right = 119.0
+offset_bottom = 129.0
+rotation = -0.008046679
+
+[node name="Label_Oliespress" type="Label" parent="." unique_id=254615223]
+offset_left = 39.0
+offset_top = 137.0
+offset_right = 120.0
+offset_bottom = 160.0
+text = "Oliespress"
+horizontal_alignment = 1
+
+[node name="Button_Web" type="Button" parent="." unique_id=1954881840]
+offset_left = 44.0
+offset_top = 192.0
+offset_right = 120.0
+offset_bottom = 266.0
+rotation = -0.008046679
+
+[node name="Label_Coins" type="Label" parent="." unique_id=690153511]
+offset_left = 1018.0
+offset_top = 605.0
+offset_right = 1061.0
+offset_bottom = 628.0
+text = "Coins"
+
+[node name="Timer" type="Timer" parent="." unique_id=630445115]
+wait_time = 60.0
+autostart = true
+
+[connection signal="button_up" from="Button_Oliespress" to="." method="_on_button_oliespress_button_up"]
+[connection signal="pressed" from="Button_Web" to="." method="_on_button_web_pressed"]
