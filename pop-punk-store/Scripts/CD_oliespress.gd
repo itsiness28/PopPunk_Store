@@ -10,8 +10,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	selectionLimit()
 	$Label3.text = (str(chainSelected) + "/" + str(chainAvailable))
-
+	$Timer.text = (str(GameManager.timeLeftDay) + " seconds left")
 
 
 func _on_button_3_pressed() -> void:
@@ -20,3 +21,9 @@ func _on_button_3_pressed() -> void:
 
 func _on_button_4_pressed() -> void:
 	chainSelected = chainSelected - 1
+
+func selectionLimit() -> void:
+	if chainSelected >= chainAvailable:
+		chainSelected = chainAvailable
+	if chainSelected < 0:
+		chainSelected = 0;

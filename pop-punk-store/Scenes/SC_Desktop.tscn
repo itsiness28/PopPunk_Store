@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2me81nk2sacj"]
 
-[ext_resource type="Script" uid="uid://boie0jml1b0l6" path="res://Scenes/CD_desktop.gd" id="1_evsn2"]
+[ext_resource type="Script" uid="uid://boie0jml1b0l6" path="res://Scripts/CD_desktop.gd" id="1_evsn2"]
 [ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="2_vs07f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lqw74"]
@@ -31,7 +31,7 @@ shader_parameter/max_lum = 0.0
 shader_parameter/time_scale = 0.0400000019
 shader_parameter/vignette_darkness = 0.0050000002375
 shader_parameter/vignette_outer_radius = 0.7
-shader_parameter/vignette_inner_radius = 0.054000002564999997
+shader_parameter/vignette_inner_radius = 0.05400000256499999
 shader_parameter/scanline_intensity = 0.06800000323
 shader_parameter/barrel_distortion = 0.0
 shader_parameter/chromatic_aberration = 0.0
@@ -108,9 +108,11 @@ offset_right = 1061.0
 offset_bottom = 628.0
 text = "Coins"
 
-[node name="Timer" type="Timer" parent="." unique_id=630445115]
-wait_time = 60.0
-autostart = true
+[node name="Timer" type="Label" parent="." unique_id=1909390350]
+offset_left = 954.0
+offset_top = 12.0
+offset_right = 1124.0
+offset_bottom = 71.0
 
 [connection signal="button_up" from="Button_Oliespress" to="." method="_on_button_oliespress_button_up"]
 [connection signal="pressed" from="Button_Web" to="." method="_on_button_web_pressed"]

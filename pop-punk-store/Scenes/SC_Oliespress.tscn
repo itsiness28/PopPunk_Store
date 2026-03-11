@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bm4w1dyy8xjqo"]
 
 [ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="1_htof5"]
-[ext_resource type="Script" uid="uid://bh8hqw6qjl3o7" path="res://Scenes/CD_oliespress.gd" id="1_vhh84"]
+[ext_resource type="Script" uid="uid://bh8hqw6qjl3o7" path="res://Scripts/CD_oliespress.gd" id="1_vhh84"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhh84"]
 shader = ExtResource("1_htof5")
@@ -139,6 +139,12 @@ offset_top = 396.0
 offset_right = 263.0
 offset_bottom = 427.0
 text = "more"
+
+[node name="Timer" type="Label" parent="." unique_id=1159990723]
+offset_left = 958.0
+offset_top = 11.0
+offset_right = 1134.0
+offset_bottom = 53.0
 
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
