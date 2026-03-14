@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	selectionLimit()
 	$Label3.text = (str(chainSelected) + "/" + str(chainAvailable))
-	$Timer.text = (str(GameManager.timeLeftDay) + " seconds left")
+	$Timer.text = ((GameManager.printTimer) + " seconds left")
 
 
 func _on_button_3_pressed() -> void:

@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$Label_Coins.text = (str(coins) + " shmonies")
-	$Timer.text = (str(GameManager.timeLeftDay) + " seconds left")
+	$Timer.text = (str(GameManager.printTimer) + " seconds left")
 
 
 func _on_button_oliespress_button_up() -> void:
