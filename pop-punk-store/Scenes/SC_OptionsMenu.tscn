@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://quuk4fg2kpg7"]
+
+[ext_resource type="Script" uid="uid://cfryw7altxepe" path="res://Scripts/CD_OptionsMenu.gd" id="1_eeqf7"]
+
+[node name="ScOptionsMenu" type="Node2D" unique_id=1614858558]
+script = ExtResource("1_eeqf7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=413748490]
+offset_left = -22.0
+offset_top = -19.0
+offset_right = 1180.0
+offset_bottom = 668.0
+color = Color(0.13725491, 0.6313726, 0.9254902, 1)
+
+[node name="BT_Return" type="Button" parent="." unique_id=1601055808]
+offset_left = 465.0
+offset_top = 574.0
+offset_right = 655.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 34
+text = "Return"
+
+[connection signal="pressed" from="BT_Return" to="." method="_on_bt_return_pressed"]

@@ -52,7 +52,6 @@ material = SubResource("ShaderMaterial_lqw74")
 position = Vector2(576, 324)
 
 [node name="Shader_Layer" type="CanvasLayer" parent="." unique_id=1435258371]
-visible = false
 
 [node name="Shader" type="ColorRect" parent="Shader_Layer" unique_id=1284208461]
 material = SubResource("ShaderMaterial_vs07f")

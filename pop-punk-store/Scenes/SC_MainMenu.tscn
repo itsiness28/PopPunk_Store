@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://lo4ljp8oljag"]
+
+[ext_resource type="Script" uid="uid://c1yu552fbh3ta" path="res://Scripts/CD_MainMenu.gd" id="1_ijpsa"]
+
+[node name="MainMenu" type="Node2D" unique_id=972740701]
+script = ExtResource("1_ijpsa")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1098924575]
+offset_left = -19.0
+offset_top = -10.0
+offset_right = 1169.0
+offset_bottom = 656.0
+color = Color(0.21960784, 0.019607844, 0.627451, 1)
+
+[node name="Label" type="Label" parent="." unique_id=698610123]
+offset_left = 372.0
+offset_top = 68.0
+offset_right = 760.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 39
+text = "Pop Punk Store"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BT_NewGame" type="Button" parent="." unique_id=759665286]
+offset_left = 441.0
+offset_top = 232.0
+offset_right = 692.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 31
+text = "New game"
+
+[node name="BT_Options" type="Button" parent="." unique_id=1426259552]
+offset_left = 444.0
+offset_top = 325.0
+offset_right = 692.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 31
+text = "Options"
+
+[node name="BT_QuitGame" type="Button" parent="." unique_id=1227712543]
+offset_left = 445.0
+offset_top = 417.0
+offset_right = 691.0
+offset_bottom = 485.0
+theme_override_font_sizes/font_size = 31
+text = "Quit"
+
+[connection signal="pressed" from="BT_NewGame" to="." method="_on_bt_new_game_pressed"]
+[connection signal="pressed" from="BT_Options" to="." method="_on_bt_options_pressed"]
+[connection signal="pressed" from="BT_QuitGame" to="." method="_on_bt_quit_game_pressed"]
