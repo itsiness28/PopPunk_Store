@@ -32,3 +32,7 @@ func selectionLimit() -> void:
 		chainSelected = chainAvailable
 	if chainSelected < 0:
 		chainSelected = 0;
+		
+		
+func _on_button_5_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/SC_Desktop.tscn")

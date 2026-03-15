@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://dm8lkqdt8f6m7"]
+[gd_scene format=3 uid="uid://dgkthfiy7m7ax"]
+
+[ext_resource type="Script" uid="uid://udj6wsq03fes" path="res://Scripts/CD_workshop.gd" id="1_70h26"]
 
 [node name="ScWorkshop" type="Node2D" unique_id=215466095]
+script = ExtResource("1_70h26")
+
+[node name="Button_Close" type="Button" parent="." unique_id=1370642811]
+offset_left = 1072.0
+offset_top = 27.0
+offset_right = 1121.0
+offset_bottom = 66.0
+text = "X"
+
+[connection signal="pressed" from="Button_Close" to="." method="_on_button_close_pressed"]

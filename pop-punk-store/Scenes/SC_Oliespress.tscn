@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://bmuqsvw6wsg8n"]
+
+[ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="1_htof5"]
+[ext_resource type="Script" uid="uid://bh8hqw6qjl3o7" path="res://Scripts/CD_oliespress.gd" id="1_vhh84"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhh84"]
+shader = ExtResource("1_htof5")
+shader_parameter/grain_intensity = 0.2210000104975
+shader_parameter/min_lum = 0.0
+shader_parameter/max_lum = 1.0
+shader_parameter/time_scale = 0.478000022705
+shader_parameter/vignette_darkness = 0.5
+shader_parameter/vignette_outer_radius = 0.72100003098762
+shader_parameter/vignette_inner_radius = 0.6170000293075
+shader_parameter/scanline_intensity = 0.0
+shader_parameter/barrel_distortion = 0.0
+shader_parameter/chromatic_aberration = 0.0
+shader_parameter/crt_vignette_power = 2.0
+shader_parameter/pixel_resolution_x = 640
+shader_parameter/pixel_resolution_y = 480
+shader_parameter/enable_color_quantization = true
+shader_parameter/color_quant_steps = 32.310001439725
+shader_parameter/warble_amount = 0.0
+shader_parameter/warble_speed = 4.6800002223
+
+[node name="ScOliespress" type="Node2D" unique_id=424922192]
+script = ExtResource("1_vhh84")
+
+[node name="Shader" type="CanvasLayer" parent="." unique_id=1352978780]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Shader" unique_id=1585614899]
+material = SubResource("ShaderMaterial_vhh84")
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.871073, 16.170525)
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=156083610]
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 1163.0
+offset_bottom = 668.0
+color = Color(1, 1, 1, 0.68235296)
+
+[node name="Label_Oliespress" type="Label" parent="." unique_id=20352414]
+offset_left = 323.0
+offset_top = 16.0
+offset_right = 780.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 49
+text = "Oliespress"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1049275013]
+offset_left = 69.0
+offset_top = 148.0
+offset_right = 254.0
+offset_bottom = 322.0
+
+[node name="Button" type="Button" parent="." unique_id=14195216]
+offset_left = 66.0
+offset_top = 324.0
+offset_right = 259.0
+offset_bottom = 374.0
+theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_font_sizes/font_size = 25
+text = "Necklace Chain"
+flat = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=991553752]
+offset_left = 326.0
+offset_top = 151.0
+offset_right = 508.0
+offset_bottom = 323.0
+
+[node name="Button2" type="Button" parent="." unique_id=1818029233]
+offset_left = 325.0
+offset_top = 325.0
+offset_right = 511.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_font_sizes/font_size = 25
+text = "Star Charm"
+flat = true
+
+[node name="Label" type="Label" parent="." unique_id=1991151070]
+offset_left = 52.0
+offset_top = 363.0
+offset_right = 258.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 21
+text = "3$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=2066458689]
+offset_left = 322.0
+offset_top = 356.0
+offset_right = 515.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 21
+text = "2$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=772280729]
+offset_left = 84.0
+offset_top = 396.0
+offset_right = 242.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 20
+text = "Available
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1066964783]
+offset_left = 318.0
+offset_top = 375.0
+offset_right = 512.0
+offset_bottom = 429.0
+theme_override_font_sizes/font_size = 20
+text = "Available"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="." unique_id=19081918]
+offset_left = 77.0
+offset_top = 397.0
+offset_right = 115.0
+offset_bottom = 428.0
+text = "less"
+
+[node name="Button3" type="Button" parent="." unique_id=1793824318]
+offset_left = 213.0
+offset_top = 396.0
+offset_right = 263.0
+offset_bottom = 427.0
+text = "more"
+
+[node name="Timer" type="Label" parent="." unique_id=1159990723]
+offset_left = 958.0
+offset_top = 11.0
+offset_right = 1134.0
+offset_bottom = 53.0
+
+[node name="Button5" type="Button" parent="." unique_id=1678466732]
+offset_left = 1081.0
+offset_top = 23.0
+offset_right = 1132.0
+offset_bottom = 64.0
+text = "X"
+
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
