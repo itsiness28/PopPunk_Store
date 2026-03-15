@@ -15,3 +15,4 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/SC_Desktop.tscn")
 	GameManager.currentLevel = GameManager.currentLevel + 1
+	GameManager.entersAfterFirst = true

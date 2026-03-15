@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://deg08dcrp327"]
 
 [node name="ScCinematics" type="Node2D" unique_id=1447064148]
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=740418150]
+offset_left = -46.0
+offset_right = 1181.0
+offset_bottom = 98.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1320819204]
+offset_left = -29.0
+offset_top = 550.0
+offset_right = 1181.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)

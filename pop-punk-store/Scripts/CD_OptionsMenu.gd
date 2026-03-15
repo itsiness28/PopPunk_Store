@@ -10,6 +10,3 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-
-func _on_bt_return_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/SC_MainMenu.tscn")
