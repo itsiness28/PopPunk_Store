@@ -10,7 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$Label_Coins.text = (str(coins) + " shmonies")
 	$Timer.text = (str(GameManager.printTimer) + " seconds left")
+	Pausa()
 
+
+func Pausa() -> void:
+	if Input.is_action_just_pressed("Pausa"):
+		get_tree().change_scene_to_file("res://Scenes/SC_PauseMenu.tscn")
+		GameManager.previousSceneToPause = 1
 
 func _on_button_oliespress_button_up() -> void:
 	get_tree().change_scene_to_file("res://Scenes/SC_MaterialStore.tscn")

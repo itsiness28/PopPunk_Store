@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://552dnr2g2mth"]
 
+[ext_resource type="Script" uid="uid://b40fckudokosd" path="res://Scripts/CD_PauseMenu.gd" id="1_m4hfc"]
+
 [node name="PauseeMenu" type="Node2D" unique_id=470213209]
+script = ExtResource("1_m4hfc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1786077765]
+offset_right = 1191.0
+offset_bottom = 687.0
+color = Color(0.1254902, 0.22745098, 0.33333334, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1785890357]
+offset_left = 506.0
+offset_top = 333.0
+offset_right = 727.0
+offset_bottom = 391.0
+text = "Volver al juego"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

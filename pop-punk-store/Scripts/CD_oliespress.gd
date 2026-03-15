@@ -13,7 +13,12 @@ func _process(delta: float) -> void:
 	selectionLimit()
 	$Label3.text = (str(chainSelected) + "/" + str(chainAvailable))
 	$Timer.text = ((GameManager.printTimer) + " seconds left")
+	Pausa()
 
+func Pausa() -> void:
+	if Input.is_action_just_pressed("Pausa"):
+		get_tree().change_scene_to_file("res://Scenes/SC_PauseMenu.tscn")
+		GameManager.previousSceneToPause = 2
 
 func _on_button_3_pressed() -> void:
 	chainSelected = chainSelected + 1

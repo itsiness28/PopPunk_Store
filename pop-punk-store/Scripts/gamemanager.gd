@@ -4,6 +4,7 @@ var timer = 0
 var printTimer 
 var currentLevel = 1
 var entersAfterFirst = false
+var previousSceneToPause 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: #On Start
@@ -21,6 +22,8 @@ func _process(delta: float) -> void: #Update
 	#Final de nivel cuando acaba el tiempo
 	EndLevel()
 	
+	#Pausa de nivel
+
 
 
 #FUNCIONES
