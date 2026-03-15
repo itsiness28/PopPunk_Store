@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_oliespress_button_up() -> void:
-	get_tree().change_scene_to_file("res://Scenes/SC_Oliespress.tscn")
+	get_tree().change_scene_to_file("res://Scenes/SC_MaterialStore.tscn")
 
 
 

@@ -3,26 +3,6 @@
 [ext_resource type="Script" uid="uid://boie0jml1b0l6" path="res://Scripts/CD_desktop.gd" id="1_evsn2"]
 [ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="2_vs07f"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqw74"]
-shader = ExtResource("2_vs07f")
-shader_parameter/grain_intensity = 0.9570000454575
-shader_parameter/min_lum = 0.0
-shader_parameter/max_lum = 1.0
-shader_parameter/time_scale = 0.7850000372875
-shader_parameter/vignette_darkness = 0.890000042275
-shader_parameter/vignette_outer_radius = 0.7
-shader_parameter/vignette_inner_radius = 0.2
-shader_parameter/scanline_intensity = 0.2
-shader_parameter/barrel_distortion = 0.15
-shader_parameter/chromatic_aberration = 0.005
-shader_parameter/crt_vignette_power = 2.0
-shader_parameter/pixel_resolution_x = 320
-shader_parameter/pixel_resolution_y = 240
-shader_parameter/enable_color_quantization = true
-shader_parameter/color_quant_steps = 32.0
-shader_parameter/warble_amount = 0.002
-shader_parameter/warble_speed = 5.0
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vs07f"]
 shader = ExtResource("2_vs07f")
 shader_parameter/grain_intensity = 0.0
@@ -45,11 +25,6 @@ shader_parameter/warble_speed = 0.0
 
 [node name="Node2D" type="Node2D" unique_id=1147893399]
 script = ExtResource("1_evsn2")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1381273921]
-visible = false
-material = SubResource("ShaderMaterial_lqw74")
-position = Vector2(576, 324)
 
 [node name="Shader_Layer" type="CanvasLayer" parent="." unique_id=1435258371]
 

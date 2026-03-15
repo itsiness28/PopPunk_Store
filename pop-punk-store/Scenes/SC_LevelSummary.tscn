@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://ts57g2earvmy"]
 
+[ext_resource type="Script" uid="uid://ruel8ebwmhdy" path="res://Scripts/CD_LevelSummary.gd" id="1_joswl"]
+
 [node name="ScLevelSummary" type="Node2D" unique_id=389166327]
+script = ExtResource("1_joswl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=546277285]
+offset_left = -10.0
+offset_top = -18.0
+offset_right = 1177.0
+offset_bottom = 655.0
+color = Color(0.7882353, 0.18431373, 0.38039216, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1302874209]
+offset_left = 929.0
+offset_top = 550.0
+offset_right = 1132.0
+offset_bottom = 624.0
+theme_override_colors/font_outline_color = Color(0.72156864, 0, 0, 1)
+text = "Next Day"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

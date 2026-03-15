@@ -14,3 +14,8 @@ func _ready() -> void: #On Start
 func _process(delta: float) -> void: #Update
 	timer = timer + (delta)
 	printTimer = str(totalTime - int(timer))
+	if  int(printTimer) == 0 :
+		get_tree().change_scene_to_file("res://Scenes/SC_LevelSummary.tscn")
+
+func _enter_tree() -> void:
+	pass
