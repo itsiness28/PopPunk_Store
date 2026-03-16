@@ -1,5 +1,6 @@
 extends Node2D
 var elementosAComprar = [0,0,0]
+var precioPedido = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +12,13 @@ func _process(delta: float) -> void:
 	$Label3.text = (str(elementosAComprar[0]) + "/" + str(GameManager.stocksCompra[0]))
 	$Timer.text = ((GameManager.printTimer) + " seconds left")
 	Pausa()
+	
+func CalculoDePrecio() -> void: 
+		precioPedido=0
+		for i in range(elementosAComprar.size()):
+			precioPedido += elementosAComprar[i] * GameManager.preciosTienda[i]
+			print(precioPedido)
+			
 
 func Pausa() -> void:
 	if Input.is_action_just_pressed("Pausa"):
@@ -19,10 +27,12 @@ func Pausa() -> void:
 
 func _on_button_3_pressed() -> void:
 	elementosAComprar[0] = elementosAComprar[0] + 1
+	CalculoDePrecio()
 	
 
 func _on_button_4_pressed() -> void:
 	elementosAComprar[0] = elementosAComprar[0] - 1
+	CalculoDePrecio()
 
 func selectionLimit() -> void:
 	if elementosAComprar[0] >= GameManager.stocksCompra[0]:
