@@ -17,6 +17,7 @@ var printTimer
 var preciosTienda = [1.5, 1, 1.25] #ir añadiendo según se desbloqueen objetos. luego, para conseguir el que quieras, mira la tabla de ref de notion con una lista y los id (segundo numero, este array es el "0" del primer numero) y es (array[0]) para lo que quieras. Si quieres el precio de la cadena haces (preciosTienda[0)]
 var descuentoActualTienda = 1.0
 var stocksCompra = [4,4,5] #usar mismo id que en precios
+var stockInventario = [0, 0, 0] #aquí es el stock que tiene ahora mismo de cada artículo, disponible para fabricar. Se hace con var bool de "pedido completado?" + seleccionado en tienda. NO USAR EN SCRIPT DE TIENDA, SOLO AL FINAL.
 var objetosVendibles = ["CollarEstrellaPlateado", "CollarLunaPlateado"] #Ir añadiendo todos los que se vayan diseñando, así, decir objetoAVender = (objetosVendibles[0]) (indicaría que es el collar de estrella)
 var stockprop_1_1 = 0 #empiezas con cero construidos. 1_1 hace referencia a Venta(0/1)_IDdeObjeto
 var clicksConst_1_1 = 10 #clicks necesarios de base para construir collar básico

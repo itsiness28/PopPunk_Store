@@ -1,8 +1,5 @@
 extends Node2D
-var chainAvailable = 5
-var starCharmAvailable = 5
-var chainSelected = 0 
-var starCharmSelected = 0
+var elementosAComprar = [0,0,0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +8,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	selectionLimit()
-	$Label3.text = (str(chainSelected) + "/" + str(chainAvailable))
+	$Label3.text = (str(elementosAComprar[0]) + "/" + str(GameManager.stocksCompra[0]))
 	$Timer.text = ((GameManager.printTimer) + " seconds left")
 	Pausa()
 
@@ -21,17 +18,19 @@ func Pausa() -> void:
 		GameManager.previousSceneToPause = 2
 
 func _on_button_3_pressed() -> void:
-	chainSelected = chainSelected + 1
+	elementosAComprar[0] = elementosAComprar[0] + 1
 	
 
 func _on_button_4_pressed() -> void:
-	chainSelected = chainSelected - 1
+	elementosAComprar[0] = elementosAComprar[0] - 1
 
 func selectionLimit() -> void:
-	if chainSelected >= chainAvailable:
-		chainSelected = chainAvailable
-	if chainSelected < 0:
-		chainSelected = 0;
+	if elementosAComprar[0] >= GameManager.stocksCompra[0]:
+		elementosAComprar[0] = GameManager.stocksCompra[0]
+	if elementosAComprar[0] < 0:
+		elementosAComprar[0] = 0;
+	if ((elementosAComprar[0]) * (GameManager.preciosTienda[0]) > GameManager.money):
+		elementosAComprar[0] = elementosAComprar[0] - 1
 		
 		
 func _on_button_5_pressed() -> void:
