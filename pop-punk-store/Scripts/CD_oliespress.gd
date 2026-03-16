@@ -17,7 +17,6 @@ func CalculoDePrecio() -> void:
 		precioPedido=0
 		for i in range(elementosAComprar.size()):
 			precioPedido += elementosAComprar[i] * GameManager.preciosTienda[i]
-			print(precioPedido)
 			
 
 func Pausa() -> void:

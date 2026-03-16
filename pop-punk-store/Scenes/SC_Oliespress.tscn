@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bmuqsvw6wsg8n"]
+[gd_scene format=3 uid="uid://d2owp7cuuejux"]
 
 [ext_resource type="Shader" uid="uid://3dpjws4b5k0i" path="res://Shaders/SD_CameraRetro.gdshader" id="1_htof5"]
 [ext_resource type="Script" uid="uid://bh8hqw6qjl3o7" path="res://Scripts/CD_oliespress.gd" id="1_vhh84"]
@@ -152,6 +152,13 @@ offset_top = 23.0
 offset_right = 1132.0
 offset_bottom = 64.0
 text = "X"
+
+[node name="Button6" type="Button" parent="." unique_id=1650859177]
+offset_left = 467.0
+offset_top = 390.0
+offset_right = 516.0
+offset_bottom = 421.0
+text = "More"
 
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
