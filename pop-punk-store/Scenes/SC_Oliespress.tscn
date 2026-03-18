@@ -158,8 +158,17 @@ offset_left = 467.0
 offset_top = 390.0
 offset_right = 516.0
 offset_bottom = 421.0
-text = "More"
+text = "more"
+
+[node name="Button7" type="Button" parent="." unique_id=1420121587]
+offset_left = 307.0
+offset_top = 391.0
+offset_right = 361.0
+offset_bottom = 422.0
+text = "less"
 
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]

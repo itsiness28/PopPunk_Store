@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	selectionLimit()
 	$Label3.text = (str(elementosAComprar[0]) + "/" + str(GameManager.stocksCompra[0]))
+	$Label4.text = (str(elementosAComprar[1]) + "/" + str(GameManager.stocksCompra[1]))
 	$Timer.text = ((GameManager.printTimer) + " seconds left")
 	Pausa()
 	
@@ -33,6 +34,7 @@ func _on_button_4_pressed() -> void:
 	elementosAComprar[0] = elementosAComprar[0] - 1
 	CalculoDePrecio()
 
+
 func selectionLimit() -> void:
 	if elementosAComprar[0] >= GameManager.stocksCompra[0]:
 		elementosAComprar[0] = GameManager.stocksCompra[0]
@@ -44,3 +46,13 @@ func selectionLimit() -> void:
 		
 func _on_button_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/SC_Desktop.tscn")
+
+
+func _on_button_6_pressed() -> void:
+	elementosAComprar[1] = elementosAComprar[1] + 1
+	CalculoDePrecio()
+	
+
+func _on_button_7_pressed() -> void:
+	elementosAComprar[1] = elementosAComprar[1] - 1
+	CalculoDePrecio()
